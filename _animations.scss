@@ -1,0 +1,34 @@
+$animationDuration: .3s;
+$perspective: 400px;
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rollFromBottom {
+    from {
+        transform: perspective($perspective) rotateX(-90deg);
+        filter: opacity(0);
+    }
+
+    to {
+        transform: perspective($perspective) rotateX(0);
+    }
+}
+
+.roll-from-bottom {
+    transform-origin: center;
+    animation: rollFromBottom $animationDuration linear backwards;
+    display: block;
+}
+
+.slide-from-top {
+    animation: slideFromTop $animationDuration cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+

@@ -1,0 +1,108 @@
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes rollFromBottom {
+  from {
+    transform: perspective(400px) rotateX(-90deg);
+    filter: opacity(0);
+  }
+  to {
+    transform: perspective(400px) rotateX(0);
+  }
+}
+.roll-from-bottom {
+  transform-origin: center;
+  animation: rollFromBottom 0.3s linear backwards;
+  display: block;
+}
+
+.slide-from-top {
+  animation: slideFromTop 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, "Inter";
+}
+
+:root {
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+body nav {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  animation-duration: 0.6s;
+}
+body nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+body nav ul a {
+  text-decoration: none;
+  color: black;
+}
+body section.landing {
+  height: 90vh;
+}
+body section.landing h1 {
+  font-size: 20vh;
+  letter-spacing: 0.5rem;
+  text-align: right;
+  width: -moz-min-content;
+  width: min-content;
+  margin-left: auto;
+}
+body section.landing h1:first-of-type {
+  animation-delay: 0.3s;
+}
+body section.landing h1:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+body section.landing > p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+body section.landing > p span {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body section.landing > p span:nth-of-type(1) {
+  animation-delay: 0.9s;
+}
+body section.landing > p span:nth-of-type(2) {
+  animation-delay: 1.2s;
+}
+body section.landing > p span:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+body section.landing > a {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  animation-delay: 1.8s;
+}
+body .avatar {
+  max-width: 60px;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */

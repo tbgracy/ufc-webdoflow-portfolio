@@ -1,0 +1,99 @@
+@import 'animations';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Inter';
+}
+
+:root {
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+
+        animation-duration: calc($animationDuration * 2);
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    section {
+        &.landing {
+            height: 90vh;
+
+            h1 {
+                font-size: 20vh;
+                letter-spacing: .5rem;
+                text-align: right;
+                width: min-content;
+                margin-left: auto;
+
+                &:first-of-type {
+                    animation-delay: $animationDuration;
+                }
+
+                &:nth-of-type(2) {
+                    animation-delay: calc($animationDuration * 2);
+                }
+            }
+
+            &>p {
+                font-size: 2rem;
+                font-weight: bold;
+
+                span {
+                    width: fit-content;
+
+                    &:nth-of-type(1) {
+                        animation-delay: calc($animationDuration * 3);
+                    }
+
+                    &:nth-of-type(2) {
+                        animation-delay: calc($animationDuration * 4);
+                    }
+
+                    &:nth-of-type(3) {
+                        animation-delay: calc($animationDuration * 5);
+                    }
+                }
+            }
+
+            &>a {
+                position: absolute;
+                right: 0;
+                bottom: 1rem;
+
+                animation-delay: calc($animationDuration * 6);
+            }
+        }
+    }
+
+    .avatar {
+        max-width: 60px;
+        border-radius: 50%;
+    }
+}
