@@ -69,8 +69,8 @@ body section.landing h1 {
   font-size: 20vh;
   letter-spacing: 0.5rem;
   text-align: right;
-  width: -moz-min-content;
-  width: min-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-left: auto;
 }
 body section.landing h1:first-of-type {
